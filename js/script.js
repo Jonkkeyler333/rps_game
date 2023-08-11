@@ -1,7 +1,7 @@
-continuar=document.getElementById("b1")
-continuar.addEventListener("click",f1)
+let botton=document.getElementById("b1")
+botton.addEventListener("click",iniciar_juego)
 
-function f1()
+function iniciar_juego()
 {
-    console.log('xd')
+    
 }
