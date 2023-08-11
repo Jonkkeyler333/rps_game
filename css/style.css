@@ -1,4 +1,4 @@
-.bienvenida{
+#bienvenida{
     text-align: justify;
 }
 
@@ -12,13 +12,13 @@ body{
 }
 
 /* Estilos para el contenido principal */
-.inicio{
+#inicio{
     flex: 1;
     padding: 20px;
 }
 
 /* Estilos para el footer */
-footer {
+footer{
     background-color: #333;
     color: #fff;
     padding: 10px;
@@ -26,4 +26,11 @@ footer {
     position: fixed;
     bottom: 0;
     width: 100%;
+}
+
+/* Estilos para el juego*/
+
+#game{
+    background-color: aqua;
+    display: none;
 }
