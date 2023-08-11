@@ -29,8 +29,11 @@ footer{
 }
 
 /* Estilos para el juego*/
-
 #game{
-    background-color: aqua;
-    display: none;
+    visibility:hidden;
+}
+
+/*Configuraciones generales*/
+*{
+    font-family:cursive;
 }
