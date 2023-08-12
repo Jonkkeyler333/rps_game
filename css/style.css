@@ -5,7 +5,8 @@
 /* Estilos generales para el cuerpo de la página */
 body{
     margin: 0;
-    padding: 0;
+    padding:0;
+    gap: 40px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -37,6 +38,12 @@ footer{
   flex-direction:row;
   justify-content:space-between;
   border: 1px solid red;
+}
+
+#marcador{
+    visibility:hidden;
+    display:flex;
+    flex-direction:column;
 }
 
 #game button {
