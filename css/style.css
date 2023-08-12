@@ -9,6 +9,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    align-items:center /* Centrar horizontalmente */
 }
 
 /* Estilos para el contenido principal */
@@ -26,11 +27,21 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
+    overflow: auto;
 }
 
 /* Estilos para el juego*/
 #game{
-    visibility:hidden;
+  visibility:hidden;
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  border: 1px solid red;
+}
+
+#game button {
+    margin: 10px; 
+    padding: 10px; 
 }
 
 /*Configuraciones generales*/
