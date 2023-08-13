@@ -45,7 +45,6 @@ footer{
 }
 
 
-
 /* Estilos para el juego*/
 #game{
     visibility: hidden;
@@ -93,4 +92,11 @@ th,td{
     background-color: #001a2b;
     box-shadow: 0 0 20px #17a2ff;
     border-color: #17a2ff;
+}
+
+
+h1{
+    z-index: 10;
+    text-shadow :#ffffff;
+    color: #001a2b; /* Color del texto (en este caso, blanco) */
 }

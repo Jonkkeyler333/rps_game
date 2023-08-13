@@ -28,7 +28,6 @@ function iniciar_juego()
     console.log(typeof(partidas)+" "+partidas)
 }
 
-
 //Juego principal
 // 1->👊🏽 2->📄 3->✂️
 let jugador=0
