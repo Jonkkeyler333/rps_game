@@ -1,28 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Racing+Sans+One&family=Roboto:wght@100&@700&display=swap');
+
+/*Configuraciones generales*/
+*{
+    font-family:cursive;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+}
+
 #bienvenida{
-    text-align: justify;
+    text-align:center;
 }
 
 /* Estilos generales para el cuerpo de la página */
 body{
-    margin: 0;
+    margin: 18px;
     padding:0;
     gap: 30px;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
     align-items:center;/* Centrar horizontalmente */
-    background: linear-gradient(blue, pink);
+    background: #f8ab92;
 }
 
 /* Estilos para el contenido principal */
 #inicio{
-    flex: 1;
+    display: flex;
+    flex-direction:column;
+    align-items:center;
     padding: 20px;
+    gap: 20px;
 }
 
 /* Estilos para el footer */
 footer{
-    background-color: #333;
+    background-color: #5e2a2a;
     color: #fff;
     padding: 10px;
     text-align: center;
@@ -52,13 +64,26 @@ footer{
     padding: 10px; 
 }
 
-/*Configuraciones generales*/
-*{
-    font-family:cursive;
-}
-
 /*Estilos de la tabla de puntuación*/
 table,th,td{
+    text-align: center;
     border : 1px solid black;
 }
+th,td{
+    padding:10px;
+}
 
+.jugador{
+    padding: 20px 50px;
+    color: #ffffff;
+    background-color: #f8ab92;
+    z-index: 2;
+    border: 3px solid;
+}
+
+.jugador:hover
+{
+    background-color: #001a2b;
+    box-shadow: 0 0 20px #17a2ff;
+    border-color: #17a2ff;
+}
