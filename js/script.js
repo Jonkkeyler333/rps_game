@@ -4,6 +4,8 @@ let game=document.getElementById("game")
 let marcador=document.getElementById("marcador")
 let jugada_player=document.getElementById("j")
 let jugada_pc=document.getElementById("p")
+let puntaje_jugador=document.getElementById("score_j")
+let puntaje_computadora=document.getElementById("score_p")
 botton.addEventListener("click",iniciar_juego)
 let partidas=0
 
@@ -68,6 +70,8 @@ function gameplay()
     if(con==3)
     {
         alert('juego acabado')
+        console.log(puntaje_j)
+        console.log(puntaje_p)
         location.reload()
     }
     else
@@ -77,13 +81,17 @@ function gameplay()
         console.log("el jugador saco "+jugador+" y el pc "+computadora)
         if ((jugador == 2 && computadora == 1) || jugador == 3 && computadora == 2 || (jugador == 1 && computadora == 3)) {
             console.log('jugador gana')
+            puntaje_j++
         }
         else if (jugador == computadora) {
             console.log('Empate')
         }
         else {
-            console.log('Pc gana')    
+            console.log('Pc gana')
+            puntaje_p++    
         }
+        puntaje_jugador.innerHTML=puntaje_j
+        puntaje_computadora.innerHTML=puntaje_p
         con++
     }
 }
