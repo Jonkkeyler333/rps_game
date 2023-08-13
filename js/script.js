@@ -75,7 +75,15 @@ function gameplay()
         jugada_player.innerHTML="el jugador lanzó "+jugador
         jugada_pc.innerHTML="El pc lanzó "+computadora
         console.log("el jugador saco "+jugador+" y el pc "+computadora)
-        
+        if ((jugador == 2 && computadora == 1) || jugador == 3 && computadora == 2 || (jugador == 1 && computadora == 3)) {
+            console.log('jugador gana')
+        }
+        else if (jugador == computadora) {
+            console.log('Empate')
+        }
+        else {
+            console.log('Pc gana')    
+        }
         con++
     }
 }
