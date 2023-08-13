@@ -62,6 +62,33 @@ function eleccion(event)
     gameplay()
 }
 
+function jugada(opcion)
+{
+    if (opcion==1){
+        return "piedra 👊🏽"
+    }
+    else if(opcion==2){
+        return "papel 📄"
+    }
+    else{
+        return "tijera ✂️"
+    }
+
+}
+
+function winner()
+{
+    if (puntaje_j<puntaje_p){
+        alert('El jugador ha perdido 😥')
+    }
+    else if(puntaje_j>puntaje_p){
+        alert('El Jugador ha ganado 😁')
+    }
+    else{
+        alert('Empate !!!😐')
+    }
+}
+
 let puntaje_j=0  //jugador
 let puntaje_p=0  //pc
 
@@ -70,14 +97,15 @@ function gameplay()
     if(con==3)
     {
         alert('juego acabado')
+        winner()
         console.log(puntaje_j)
         console.log(puntaje_p)
         location.reload()
     }
     else
     {
-        jugada_player.innerHTML="el jugador lanzó "+jugador
-        jugada_pc.innerHTML="El pc lanzó "+computadora
+        jugada_player.innerHTML="El jugador lanzó "+jugada(jugador)
+        jugada_pc.innerHTML="El pc lanzó "+jugada(computadora)
         console.log("el jugador saco "+jugador+" y el pc "+computadora)
         if ((jugador == 2 && computadora == 1) || jugador == 3 && computadora == 2 || (jugador == 1 && computadora == 3)) {
             console.log('jugador gana')
