@@ -94,34 +94,37 @@ let puntaje_p=0  //pc
 
 function gameplay()
 {
-    if(con==3)
+    verificar()
+    con++
+    if(con==partidas)
     {
-        game.style.visibility="hidden"
-        marcador.style.visibility="hidden" 
-        alert('juego acabado')
-        winner()
-        console.log(puntaje_j)
-        console.log(puntaje_p)
-        location.reload()
+        // verificar()
+        setTimeout(function() {
+            alert('Juego acabado');
+            winner();
+            console.log(puntaje_j);
+            console.log(puntaje_p);
+            location.reload();
+        }, 100);
     }
-    else
-    {
-        jugada_player.innerHTML="El jugador lanzó "+jugada(jugador)
-        jugada_pc.innerHTML="El pc lanzó "+jugada(computadora)
-        console.log("el jugador saco "+jugador+" y el pc "+computadora)
-        if ((jugador == 2 && computadora == 1) || jugador == 3 && computadora == 2 || (jugador == 1 && computadora == 3)) {
-            console.log('jugador gana')
-            puntaje_j++
-        }
-        else if (jugador == computadora) {
-            console.log('Empate')
-        }
-        else {
-            console.log('Pc gana')
-            puntaje_p++    
-        }
-        puntaje_jugador.innerHTML=puntaje_j
-        puntaje_computadora.innerHTML=puntaje_p
-        con++
-     }
+}
+
+function verificar()
+{
+    jugada_player.innerHTML="El jugador lanzó "+jugada(jugador)
+    jugada_pc.innerHTML="El pc lanzó "+jugada(computadora)
+    console.log("el jugador saco "+jugador+" y el pc "+computadora)
+    if ((jugador == 2 && computadora == 1) || jugador == 3 && computadora == 2 || (jugador == 1 && computadora == 3)) {
+        console.log('jugador gana')
+        puntaje_j++
+    }
+    else if (jugador == computadora) {
+        console.log('Empate')
+    }
+    else {
+        console.log('Pc gana')
+        puntaje_p++    
+    }
+    puntaje_jugador.innerHTML=puntaje_j
+    puntaje_computadora.innerHTML=puntaje_p
 }
