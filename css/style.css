@@ -41,16 +41,22 @@ footer{
     position: fixed;
     bottom: 0;
     width: 100%;
-    overflow: auto;
+    overflow: hidden;
 }
+
+
 
 /* Estilos para el juego*/
 #game{
-  visibility:hidden;
-  display:flex;
-  flex-direction:row;
-  justify-content:space-between;
-  border: 1px solid red;
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: 2px solid #e57373; /* Cambia el color y el grosor del borde */
+    background-color: #f8ab92;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #17a2ff;
 }
 
 #marcador{
@@ -66,6 +72,7 @@ footer{
 
 /*Estilos de la tabla de puntuación*/
 table,th,td{
+    z-index: 3;
     text-align: center;
     border : 1px solid black;
 }
@@ -77,7 +84,7 @@ th,td{
     padding: 20px 50px;
     color: #ffffff;
     background-color: #f8ab92;
-    z-index: 2;
+    z-index: 10;
     border: 3px solid;
 }
 

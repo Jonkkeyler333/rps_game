@@ -96,6 +96,8 @@ function gameplay()
 {
     if(con==3)
     {
+        game.style.visibility="hidden"
+        marcador.style.visibility="hidden" 
         alert('juego acabado')
         winner()
         console.log(puntaje_j)
@@ -121,5 +123,5 @@ function gameplay()
         puntaje_jugador.innerHTML=puntaje_j
         puntaje_computadora.innerHTML=puntaje_p
         con++
-    }
+     }
 }
